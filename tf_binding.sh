@@ -7,4 +7,10 @@ awk '{if($3 == "transcript") print}' gencode.v19.annotation.chr22.gtf > gencode.
 exercise 3:
 module load biotools
 bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r -0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
+Lisa Elmen has done exercise 4, 5
+module load biotools
+bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf.nfkb.bed  > gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
+module load biotools
+bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta 
+
 
