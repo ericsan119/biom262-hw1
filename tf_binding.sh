@@ -1,3 +1,18 @@
+#PBS TAGS
+#!/bin/csh
+#PBS -q hotel
+#PBS -N tf_binding.sh
+#PBS -l nodes=10:ppn=2
+#PBS -l walltime=0:50:00
+#PBS -o output.sh
+#PBS -e error.txt
+#PBS -V
+#PBS -M csloo@ucsd.edu
+#PBS -m abe
+#PBS -A csloo
+cd /oasis/tscc/scratch/ucsd-train08
+mpirun -v -machinefile $PBS_BODEFILE -np 20 <.mpi.out>
+
 #Chin San, Loo has done excersice 1, 2 and 3.
 The code as below:
 #exercise 1:
