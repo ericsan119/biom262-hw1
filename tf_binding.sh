@@ -9,9 +9,9 @@
 #PBS -V
 #PBS -M csloo@ucsd.edu
 #PBS -m abe
-#PBS -A csloo
+#PBS -A ucsd-train08
 cd /oasis/tscc/scratch/ucsd-train08
-mpirun -v -machinefile $PBS_BODEFILE -np 20 <.mpi.out>
+mpirun -v -machinefile $PBS_NODEFILE -np 20 <.mpi.out>
 
 #Chin San, Loo has done excersice 1, 2 and 3.
 #The code as below:
@@ -27,9 +27,11 @@ bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 
 bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf.nfkb.bed  > gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 #exercise 5:
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta 
+#exercise 6:
+
 
  echo "Hello I am a message in standard out (stdout)"
- echo "Hello I am a message in standard error (stderr)"
+ echo "Hello I am a message in standard error (stderr)" >&2
 
 
 
