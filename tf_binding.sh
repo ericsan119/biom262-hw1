@@ -14,7 +14,7 @@ cd /oasis/tscc/scratch/ucsd-train08
 mpirun -v -machinefile $PBS_BODEFILE -np 20 <.mpi.out>
 
 #Chin San, Loo has done excersice 1, 2 and 3.
-The code as below:
+#The code as below:
 #exercise 1:
 grep 'NFKB' tf.bed > tf.nfkb.bed
 #exercise 2:
