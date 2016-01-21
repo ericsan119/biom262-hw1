@@ -1,20 +1,11 @@
-#PBS TAGS
-#!/bin/csh
+#!/bin/bash
 #PBS -q hotel
 #PBS -N tf_binding.sh
-#PBS -l nodes=10:ppn=2
-#PBS -l walltime=0:50:00
-#PBS -o output.sh
-#PBS -e error.txt
-#PBS -V
-#PBS -M csloo@ucsd.edu
-#PBS -m abe
-#PBS -A ucsd-train08
-cd /oasis/tscc/scratch/ucsd-train08
-mpirun -v -machinefile $PBS_NODEFILE -np 20 <.mpi.out>
+#PBS -l nodes=2:ppn=2
+#PBS -l walltime=:00:20:00
 
-#Chin San, Loo has done excersice 1, 2 and 3.
-#The code as below:
+cd ~/code/biom262-hw1/data
+#Chin San, Loo has done excersice 1, 2 and 3. The code as below:
 #exercise 1:
 grep 'NFKB' tf.bed > tf.nfkb.bed
 #exercise 2:
