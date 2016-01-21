@@ -19,7 +19,7 @@ bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf
 #exercise 5:
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta 
 #exercise 6:
-
+#More work is needed to “validate” the homework fasta-file. I expected to find some matches using the data from Wong et al, but came up with 0 matches which does not seem reasonable. I tried different variants of grep to compare the list of canonical NFKB sequences, and the non-canonical consensus sequences with commands like “grep -Fx -f NFKBcanonical gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta  > Hope_to_find_match.txt” OR “grep 'CTGGGGATTTA' gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta > Still_hope_to_find_match.txt”.
 
  echo "Hello I am a message in standard out (stdout)"
  echo "Hello I am a message in standard error (stderr)" >&2
