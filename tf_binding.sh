@@ -4,7 +4,7 @@
 #PBS -l nodes=2:ppn=2
 #PBS -l walltime=:00:20:00
 
-cd ~/code/biom262-hw1/data
+cd ~/code/biom262-2016/weeks/week01/data
 #Chin San, Loo has done excersice 1, 2 and 3. The code as below:
 #exercise 1:
 grep 'NFKB' tf.bed > tf.nfkb.bed
